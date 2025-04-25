@@ -1,0 +1,380 @@
+/* ===== Umum ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Navigasi ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #00e1ff;
+}
+
+.nav-buttons button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.nav-buttons button:hover {
+  background: #00bcd4;
+}
+
+/* ===== Video Background Section ===== */
+.struktur-section {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Struktur Organisasi ===== */
+.struktur-container {
+  padding: 100px 20px 60px;
+}
+
+.glow-text {
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  margin-bottom: 40px;
+}
+
+.org-tree {
+  display: flex;
+  justify-content: center;
+}
+
+.org-tree ul {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.org-tree ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid white;
+  height: 20px;
+}
+
+.org-tree li {
+  list-style: none;
+  text-align: center;
+  position: relative;
+  padding: 20px 5px 0 5px;
+}
+
+.org-tree li::before, .org-tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top: 2px solid white;
+  width: 50%;
+  height: 20px;
+}
+
+.org-tree li::before {
+  left: -50%;
+  border-right: 2px solid white;
+}
+
+.org-tree li::after {
+  right: -50%;
+  border-left: 2px solid white;
+}
+
+.org-tree li:only-child::before, .org-tree li:only-child::after {
+  content: none;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00ffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 8px #00ffff;
+}
+
+.box span {
+  font-weight: normal;
+  font-size: 0.85em;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ===== Anggota Kelas ===== */
+#anggota {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.anggota-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anggota-card {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 25px 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.anggota-card:hover {
+  transform: scale(1.05);
+}
+
+.anggota-card span {
+  margin-top: 6px;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: #555;
+}
+
+body.dark-mode .anggota-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .anggota-card span {
+  color: #ccc;
+}
+
+.anggota-card img {
+  width: 100%;
+  border-radius: 6px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* ===== Galeri Dokumentasi ===== */
+#dokumentasi {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.galeri-img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.galeri-img:hover {
+  transform: scale(1.03);
+}
+
+#lihat-galeri {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .navbar {
+  background-color: #222;
+}
+
+body.dark-mode .box {
+  border-color: #00e1ff;
+}
+
+body.dark-mode .anggota-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .galeri-img {
+  filter: brightness(0.9);
+}
+
+body.dark-mode footer {
+  background-color: #222;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#sosial-media {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+body.dark-mode #sosial-media {
+  background: #1a1a1a;
+}
+
+.sosial-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.sosial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sosial-item:hover {
+  transform: translateY(-5px);
+}
+
+.sosial-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.sosial-item p {
+  font-size: 1em;
+  color: #333;
+}
+
+body.dark-mode .sosial-item p {
+  color: #fff;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007acc;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .social-media {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .social-media h3 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #007acc;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      color: #005f88;
+    }
+
+    .social-icons i {
+      font-size: 1.8em;
+      margin-bottom: 5px;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tentang Website Ini</h1>
+    <p><strong>Versi Website:</strong> 1.0</p>
+    <p><strong>Developer:</strong> Tegar Arifianto [secureXXI]</p>
+    <p><strong>Mengapa website ini dibuat?</strong><br>
+      Website ini dibuat untuk mendokumentasikan kegiatan dan struktur organisasi Kelas IX A secara modern dan interaktif. Tujuan utamanya adalah memberikan tempat bagi siswa untuk mengenang momen kelas, berbagi galeri, serta mengenal lebih dekat satu sama lain melalui tampilan yang menarik dan dinamis.</p>
+
+    <div class="social-media">
+      <h3>Media Sosial Developer</h3>
+      <div class="social-icons">
+        <a href="https://instagram.com/tgar__4" target="_blank">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
+        <a href="https://github.com/secureXXI" target="_blank">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a href="https://www.tiktok.com/openeyes_id" target="_blank">
+            <i class="fab fa-tiktok"></i>
+            TikTok
+        </a>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+  </div>
+</body>
+</html>
