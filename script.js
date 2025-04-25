@@ -73,6 +73,17 @@ lihatGaleriBtn.addEventListener("click", () => {
     "images/kenangan34.jpg",
     "images/kenangan35.jpg",
     "images/kenangan36.jpg",
+    "images/kenangan37.jpg",
+    "images/kenangan38.jpg",
+    "images/kenangan39.jpg",
+    "images/kenangan40.jpg",
+    "images/kenangan41.jpg",
+    "images/kenangan42.jpg",
+    "images/kenangan43.jpg",
+    "images/kenangan44.jpg",
+    "images/kenangan45.jpg",
+    "images/kenangan46.jpg",
+    "images/kenangan47.jpg",
   ];
 
   newImages.forEach(src => {
